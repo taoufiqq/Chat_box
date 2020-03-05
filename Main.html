@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body style="text-align: center;">
+	<div id="container">
+     <div id="myd"></div>
+    </div>  
+    <div class="div1">  
+     	<button id="btn1" onclick="message1();">Person1</button>
+     	 <input type="text" id="txt" placeholder="Add your Message...">
+        <button id="btn2" onclick="message2();">Person2</button> 
+     </div>    
+ <script>
+
+ 	
+    function  message1() {
+    	var msg = document.getElementById('txt');
+        var myd = document.getElementById("myd");
+        var c = document.getElementById("container");
+
+        if (!msg.value) {
+
+   	     alert("please add your message!!!!!!!!!!!!");
+        }else{
+    	  var spa = document.createElement("h5");
+    	  spa.setAttribute('class', 'title');
+          var  label = document.createTextNode(msg.value);
+
+          var  div = document.createElement("div");
+
+           spa.appendChild(label);
+           div.appendChild(spa);
+           myd.appendChild(div);
+           document.getElementById('txt').value="";
+           c.scrollBy(0, 100000);
+
+          
+ 
+    }
+}
+    function  message2() {
+    	var msg = document.getElementById('txt');
+        var myd = document.getElementById("myd");
+        var c = document.getElementById("container");
+
+        if (!msg.value) {
+
+   	     alert("please add your message!!!!!!!!!!!!");
+         }else{
+    	  var  para = document.createElement("p");
+
+          var  label = document.createTextNode(msg.value);
+
+          var  div = document.createElement("div");
+
+           para.appendChild(label);
+           div.appendChild(para);
+           myd.appendChild(div);
+           document.getElementById('txt').value="";
+           c.scrollBy(0, 100000);
+ }
+}
+
+
+
+ </script>
+</body>
+</html>
